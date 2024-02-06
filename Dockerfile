@@ -28,4 +28,4 @@ COPY --from=build /vbreddy-blog/dist /usr/share/nginx/html
 EXPOSE 80
 
 # Start Nginx when the container runs
-CMD ["nginx", "-g", "daemon on;"]
+CMD ["nginx", "-g", "daemon off;"]
