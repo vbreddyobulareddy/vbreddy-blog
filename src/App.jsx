@@ -1,11 +1,9 @@
-import { HomeHeroBannerComponent } from "./components/banner/home-hero-banner";
-import { HomeNavbarComponent } from "./components/navbar/home-navbar";
- 
-export default function App() {
+import { Routes } from './routes';
+
+const App = () => {
   return (
-    <>
-      <HomeNavbarComponent />
-      <HomeHeroBannerComponent />
-    </>
+    <Routes isAuthorized={true} />
   );
 }
+
+export default App;
