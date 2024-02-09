@@ -1,16 +1,14 @@
-import { Navigate, Outlet } from "react-router-dom";
-import PropTypes from 'prop-types';
+import { Navigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ProtectedRoute = (props) => {
-  const { isPublic, isAuthorized } = props;
-  return (
-    <>{isPublic || isAuthorized ? <Outlet /> : <Navigate to="/login" />}</>
-  );
+  const { isAuthorized } = props;
+  return <>{isAuthorized ? props.children : <Navigate to="/admin/auth" />}</>;
 };
 
 ProtectedRoute.propTypes = {
-  isPublic: PropTypes.boolean,
   isAuthorized: PropTypes.boolean,
+  children: PropTypes.node,
 };
 
 export default ProtectedRoute;

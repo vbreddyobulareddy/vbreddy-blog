@@ -6,7 +6,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 
-export function HomeNavbarComponent() {
+export function AdminNavbarComponent() {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
